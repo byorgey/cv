@@ -1,0 +1,203 @@
+\documentclass{article}
+
+\usepackage{brent}
+\usepackage{url}
+\usepackage{titlesec}
+\usepackage{hanging}
+\usepackage[noheadfoot]{geometry}
+
+\pagestyle{empty}
+
+\titleformat{\section}{}{}{}{\bfseries\uppercase}
+\titlespacing*{\section}{0pt}{*2}{0pt}
+
+\setlength{\parskip}{0pt}
+
+\newcommand{\cvitem}{\par\hangpara{2em}{1}}
+
+\begin{document}
+
+\begin{center}
+  {\huge Brent Yorgey} \\
+  \emph{Curriculum Vitae} \\
+  \today
+\end{center}
+
+\noindent
+\parbox{2.5in}{
+Computer and Information Science \\
+Levine Hall, University of Pennsylvania \\
+Philadelphia, PA 19104
+}
+\hfill
+\parbox{2.5in}{
+\texttt{byorgey@cis.upenn.edu} \\
+\url{http://www.cis.upenn.edu/~byorgey}
+}
+\medskip
+
+\hrule
+
+\section*{Research interests}
+Programming languages, functional programming, (embedded)
+domain-specific languages, combinatorics, generic programming, type
+theory, dependent type systems
+
+\section*{Education}
+\cvitem
+Candidate for Ph.D. in Computer Science, University of Pennsylvania,
+September 2008--present \\
+Advisor: Stephanie Weirich
+
+\cvitem B.A. in Computer Science, \latin{summa cum laude}, Williams
+College, June 2004
+
+\section*{Awards and Honors}
+\cvitem Penn Prize for Excellence in Teaching by Graduate Students, 2012
+\cvitem Teaching Practicum Award, University of Pennsylvania, 2010
+\cvitem Sam Goldberg Colloquium Prize in Computer Science, Williams
+College, 2004
+\cvitem Phi Beta Kappa
+\cvitem Milken Scholar
+\cvitem National Merit Scholar
+
+\section*{Teaching experience}
+
+\cvitem
+University of Pennsylvania \\
+CIS 194, Introduction to Haskell (Course designer and instructor ---
+F'10, S'12, S'13) \\
+CIS 399, The Art of Recursion (Course designer and instructor ---
+F'12) \\
+CIS 500, Software Foundations (TA --- S'10, S'11) \\
+CIS 120, Programming Languages and Techniques I (TA --- F'09)
+
+\cvitem
+Woodrow Wilson Senior High School, Washington, DC, 2004--2006 \\
+Introduction to Computer Science \\
+AP Computer Science AB \\
+Honors Precalculus
+
+\cvitem
+Williams College, Williamstown, MA, 2001--2004 \\
+Discrete Mathematics (TA, S'01) \\
+Computer Organization and Architecture (TA, F'01, F'02, F'03) \\
+Abstract Algebra (TA, S'03) \\
+Computational Geometry (TA, S'04) \\
+
+\section*{Professional experience}
+\cvitem
+Research/Teaching Assistant \\
+University of Pennsylvania, Philadelphia, PA, August 2008--present
+
+\cvitem
+Research Intern \\
+Microsoft Research, Cambridge, England, June--August 2010 \\
+Worked on an experimental extension to the Glasgow Haskell Compiler with
+Simon Peyton Jones and Dimitrios Vytiniotis.
+
+\cvitem
+Software Developer \\
+Ascella Technologies / CGI Federal, Washington,
+DC, July 2006--July 2008
+
+\cvitem
+Researcher \\
+Williams College, Williamstown, MA, June--August 2003 \\
+Conducted original research in computational geometry with Bill Lenhart.
+
+\cvitem
+Research Assistant \\
+University of Maryland, College Park, MD, Spring 2000 \\
+Created real-time data compression utilities for experiments in
+molecular physics using high-speed cameras.
+
+\section*{Refereed Publications}
+
+\cvitem Brent A. Yorgey. Monoids: Theme and Variations
+(\emph{Functional Pearl}).  In \emph{Proceedings of the 5th ACM
+  SIGPLAN Symposium on Haskell} (Haskell '12), pp. 105--116.
+
+\cvitem Brent A. Yorgey, Stephanie Weirich, Julien Cretin, Simon
+Peyton Jones, Dimitrios Vytiniotis, and Jos\'e Pedro
+Magalh\~aes. Giving Haskell a Promotion. In \emph{Proceedings of the
+  8th ACM SIGPLAN Workshop on Types in Language Design and
+  Implementation} (TLDI '12), pp. 53--66.
+
+\cvitem Stephanie Weirich, Brent A. Yorgey, and Tim Sheard. Binders
+  Unbound. In \emph{Proceedings of the 16th ACM SIGPLAN International
+    Conference on Functional Programming} (ICFP '11), pp. 333--345.
+
+\cvitem Brent A. Yorgey. Species and Functors and Types, Oh
+  My! (\emph{Functional Pearl}). In \emph{Proceedings of the 3rd ACM SIGPLAN
+  Symposium on Haskell} (Haskell '10), pp. 147--158.
+
+\section*{Books}
+\cvitem Benjamin C. Pierce, Chris Casinghino, Michael Greenberg,
+C{\v a}t{\v a}lin Hri{\c t}cu, Vilhelm Sj\"oberg, and Brent Yorgey. \emph{Software
+  Foundations}. \url{http://www.seas.upenn.edu/~cis500/current/sf/html/index.html}.
+
+\section*{Other Publications}
+\cvitem Brent Yorgey. \emph{The Typeclassopedia}. In: The
+Monad.Reader, Issue 13, March 2009.
+
+\cvitem Brent Yorgey. \emph{Generating Multiset Partitions}.  In: The
+Monad.Reader, Issue 8, September 2007.
+
+\cvitem Brent Yorgey. \texttt{blog :: Brent ->
+  [String]}. \url{http://byorgey.wordpress.com}.  \\
+A blog aimed at the academic community, for discussing current ideas
+and research.  June 2007--present.
+
+\cvitem Brent Yorgey. \emph{The Math Less
+  Traveled}. \url{http://www.mathlesstraveled.com}. \\
+A blog aimed at a broad audience, especially high school students,
+exploring beatiful ideas in mathematics.  March 2006--present.
+
+\section*{Talks}
+
+\cvitem \emph{Functional Active Animation}. Workshop on Functional
+    Art, Music, Modeling and Design (FARM).  September 28, 2013.
+\cvitem \emph{Monoids: Theme and Variations}. Haskell Symposium.
+    September 13, 2012.
+\cvitem \emph{Giving Haskell a Promotion}. Workshop on Types in
+    Language Design and Implementation (TLDI). January 28, 2012.
+\cvitem \emph{Typed type-level programming with GHC}. Haskell
+    Implementors' Workshop. October 1, 2010.
+\cvitem \emph{Species and Functors and Types, Oh My!} Haskell
+    Symposium. September 30, 2010.
+\cvitem \emph{Random testing---and beyond! with combinatorial
+    species}. University of Kansas.  November 24, 2009.
+\cvitem \emph{Executable Mathematics: a Whirlwind Introduction to
+    Haskell}. Williams College.  June 8, 2008.
+\cvitem \emph{xmonad: a Haskell Success Story}. FringeDC, Washington,
+    DC. March 22, 2008.
+
+\section*{Service}
+\cvitem Haskell core libraries committee, June 2013--
+
+\cvitem Haskell.org committee, October 2012--
+
+\cvitem Haskell Symposium 2012 program committee
+
+\cvitem Coordinator, Penn PLClub, June 2012--
+
+\cvitem Penn Alexander middle school math club, October 2009--November
+2010. \\
+Volunteered to help lead middle school students in a variety of fun
+and engaging mathematical explorations.
+
+\cvitem Editor, \emph{The Monad.Reader}, October 2009--October 2011 \\
+A free electronic magazine about functional programming, targeted at
+the Haskell community.
+
+\cvitem Organizer, Hac $\varphi$ (July 2009, May 2010, July 2011,
+August 2012, June 2013) \\
+Open three-day meetings for collaboration on projects using the functional
+programming language Haskell, with around 30 attendees.
+
+\cvitem Editor, \emph{Haskell Weekly News}, June 2008--August 2009 \\
+Collected and published a weekly gathering of news items from the
+Haskell programming language community.
+
+\end{document}
