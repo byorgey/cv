@@ -1,0 +1,65 @@
+* Notes from meeting with Stephanie, 18 Nov
+** Teaching statement
+
+Impart knowledge: "knowledge" could be more than just first-order!
+Maybe "facts" is a better word.
+
+"Transformative" --- transforming into what?  Be more specific.
+  Brainstorming:
+
+  Transformed in the way they approach problems.  In the way they
+  *pose* problems.
+
+How to make the case I am a great teacher?
+
+  - awards.  external validation.
+    - note: rare for PhD students to create and teach their own
+      classes.
+  - experience.
+  - what I think good teaching is.
+
+  - How do I know these techniques worked?  Elaborate.
+    - Did students get what I thought they would get --- e.g. exams?
+
+  - More explicit: what I think good teaching is.
+
+  - problem solving vs problem creation? --- sometimes we don't even
+    realize we have a problem.
+
+  - don't care about "enthusiasm".  What about outputs?  What are
+    goals for students in the end?  Bring out that I'm focused on
+    that, rather than on just being entertaining etc.
+
+Transformative:
+
+  - make students think about things in a different way.
+
+  - transform the way they think about math.
+
+  - do things in a different way to get past preconceived ideas ---
+    get them to see things in new ways.
+  - getting past hangups -- false impressions from seeing only one
+    part of mathematics/CS.
+
+** Research statement
+
+   Move "beauty" to come first.
+
+   "This is what I think good research is."
+
+   Communication -- elaborate.  Research is a dialogue between
+   researchers.
+
+   Applying well-studied mathematical abstractions to new problems.  A
+   quality of successful research.  Move EDSL section first?
+
+   Distinguishing myself: don't just care about beautiful math for its
+   own sake.  Also, it has to be useful; in fact, beautiful is MORE
+   useful!
+
+   Unifying theme through both combinatorics and DSL stuff -- applying
+   beautiful math.
+
+   "Combinatorics" --- it's not just combinatorics.  Application of
+   combinatorics.  Skimming should give true, conservative
+   approximation.
