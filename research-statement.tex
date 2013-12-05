@@ -1,3 +1,4 @@
+% -*- compile-command: "pdflatex research-statement.tex" -*-
 \documentclass[12pt]{article}
 
 \usepackage{fullpage}
@@ -32,8 +33,9 @@ research are three major themes which shape and direct my efforts:
 \item Architecting and appreciating beauty always happen in the
   context of community.  I love \textbf{communicating} ideas, through
   both teaching and writing, and see communication and collaboration
-  as a central and necessary aspect of my research. XXX say something
-  about advising undergrad projects?
+  as a central and necessary aspect of my research.
+  % XXX say something
+  % about advising undergrad projects?
  % In addition, many of my projects
  %  are intended to enable the communication of beautiful ideas in
  %  beautiful ways.
@@ -43,55 +45,98 @@ In what follows, I describe several current areas of research,
 highlighting the ways they fit into the above themes, and elaborate on
 planned future directions for my research.
 
-\section*{Combinatorics}
+%% XXX actually highlight how they fit into the above themes!  And
+%% highlight continuity between them: applying beautiful math to give
+%% insight/solve problems/etc.
+
+\section*{Combinatorics, computation, and data structures}
 \label{sec:combinatorics}
 
 I am keenly interested in the intersection of combinatorics and
-computation.  In particular, taking well-understood results in pure
-combinatorics and ``porting'' them to a computational setting yields
-both practical programming tools and new insight into the underlying
-mathematics.
+computation.  In particular, taking results in pure combinatorics and
+``porting'' them to a computational setting yields both practical
+programming tools and new insight into the underlying mathematics.
 
-My dissertation research focuses on the \emph{theory of species},
-developed over the past three decades as a unifying framework for
-enumerative combinatorics. It allows discrete structures to be
-described algebraically and then systematically analyzed using
-generating functions.  The theory's great strength lies in a coherent,
-precise description of the relationship between \emph{labelled} and
-\emph{unlabelled} structures.  The core of my dissertation is to port
-the theory of species from set theory to constructive type theory, and
-to then use them as a foundational basis for data structures in
-programming languages. This results in a theory of \emph{labelled data
-  structures} which unifies algebraic data types (lists, binary trees,
-\dots) and what one would more typically think of as labelled
-structures (arrays, finite maps, \dots), leading to richer
-expressivity and a conceptual framework for understanding existing
-algorithms and data structures in new ways.
+My dissertation research focuses on the \textbf{theory of
+  combinatorial species}, developed over the past three decades as a
+unifying framework for enumerative combinatorics. As a purely
+combinatorial theory, species are relatively well-explored, but there
+are striking connections to the theory of algebraic data types which
+remain largely unexplored and unexploited.  The core of my
+dissertation is to port the theory of species from set theory to
+constructive type theory, and to then use it as a foundational basis
+for data structures in programming languages. One of the theory's
+great strength lies in a coherent, precise description of the
+relationship between \emph{labelled} and \emph{unlabelled} structures,
+so this results in a theory of \textbf{labelled data structures} which
+unifies algebraic data types (such as lists or binary trees) and what
+one would more typically think of as labelled structures (vectors,
+arrays, finite maps, \dots), leading to richer expressivity and a
+conceptual framework for understanding existing algorithms and data
+structures in new ways.  For example, it seems that the theory gives
+an abstract yet precise way to think about issues of memory layout and
+allocation, in, say, matrix algorithms.
 
 \subsection*{Future directions}
 
-The theory of species can also serve as a foundation for understanding
-structures with \emph{symmetry} (cycles, bags, \dots)
+Another strength of the theory of species is its ability to describe
+structures with nontrivial symmetries, such as cycles or bags.
+Computationally, these correspond to data structures where one
+``abstract'' value can have multiple concrete representations which
+the programmer should not be able to observe.  Such abstract data
+types occur frequently, but are typically implemented in an ad-hoc
+way, with no help from the compiler in ensuring that the
+implementation is correct or that the abstract interface does not leak
+representation detail.  Species may afford a framework for reasoning
+about such abstract data structures, though the details are far from
+obvious.  This is an area I have explicitly chosen not to explore in
+my doctoral research, but which I am excited to ponder in the future.
 
-Generating functions. XXX This is a rich seam of material with plenty
-of combinatorics left to ``mine'' for computational significance.
+Yet another key feature of the theory of species is its strong
+connection to the theory of generating functions, which can be used to
+summarize and extract information of interest about species.  This is
+a rich seam of material with plenty of combinatorics left to ``mine''
+for computational significance.  In particular, my hope is that many
+algorithms of interest over data structures (enumeration, random
+generation, serialization, deserialization\dots) can be reformulated
+using the framework of generating functions, leading to new insights
+and new algorithms.
+
+Unfortunately, there is not much scope for undergraduate involvement
+in these threads of my research, since attacking the interesting
+questions typically requires background in combinatorics and/or
+category theory that most undergraduates would not have.  In contrast,
+however, there are many potential ways for undergraduates to become
+involved in the other main area of my research, outlined in the next
+section.
 
 \section*{Domain-specific languages}
 \label{sec:edsls}
 
 Almost any domain can benefit greatly from the principled design of
-domain-specific languages and type systems.  Such languages enable
-more economical communication of problems and solutions in the domain
-(with both computers and humans), and enable abstraction XXX.
-Moreover, the process of constructing domain-specific languages itself
-often sheds new light on the domain under consideration, since it
-exposes fundamental questions about the meaning of entities and
-operations in the domain.
+\textbf{domain-specific languages and type systems}.  Such languages
+enable more economical communication of problems and solutions in the
+domain (with both computers and humans), and abstracting away
+domain-irrelevant detail enables higher-level thinking and new
+insights.  Moreover, the process of constructing domain-specific
+languages itself often sheds new light on the domain under
+consideration, since it exposes fundamental questions about the
+meaning of entities and operations in the domain.
 
 My current work on embedded domain-specific languages focuses on the
-areas of graphics and animation.
+areas of graphics and animation.  For the past five years I have been
+developing a domain-specific language, \texttt{diagrams}, for
+describing \textbf{vector graphics}.  It is embedded in the Haskell
+programming language, with emphases on expressivity, elegant design,
+and careful analysis of the underlying domain, leading to the
+application of mathematical abstractions capturing its essence.
 
 \subsection*{Future directions}
+
+I am currently collaborating on a domain-specific language for
+constructing \emph{animations}, 
+
+Interactivity.
 
 Bidirectional UI.  More broadly applicable.  Note possibility of
 student involvement.
