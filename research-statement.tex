@@ -131,18 +131,38 @@ programming language, with emphases on expressivity, elegant design,
 and careful analysis of the underlying domain, leading to the
 application of mathematical abstractions capturing its essence.
 
+\texttt{diagrams} currently makes use of a preliminary domain-specific
+language for constructing \textbf{animations} (and more generally, any
+\emph{time-varying} values).  In collaboration with Andy Gill and Nick
+Wu, I have been working on a complete redesign based on a cleaner
+semantics.  The sorts of issues which arise are relevant for other
+time-centric domains as well, such as music and signal processing.
+
 \subsection*{Future directions}
 
-I am currently collaborating on a domain-specific language for
-constructing \emph{animations}, 
+One interesting direction in which to extend the \texttt{diagrams}
+framework is to add a layer for \textbf{interactivity}.  Currently,
+the user can describe static or even animated diagrams, but there is
+no easy way to create diagrams which respond to input from the user.
+What are the underlying semantics of iteractivity?  What would it
+look like to have a convenient language in which to describe
+interactive things?  Part of the answer may lie in recent work on
+\emph{functional reactive programming}, but integrating this work with
+diagrams raises some interesting questions.
 
-Interactivity.
+In addition to having interactivity in the end result, what about
+interactivity in the process of constructing diagrams itself?  The
+idea is to develop a \textbf{bidirectional user interface} which
+allows a user to construct a diagram either by writing code or by
+interacting directly with the displayed diagram using their mouse,
+either to edit the existing diagram or to draw new components.  In
+either case, edits to one form (code or image) will be immediately
+reflected in the other.  The new techniques needed to make such a
+bidirectional user interface work should also be applicable in domains
+other than drawing.
 
-Bidirectional UI.  More broadly applicable.  Note possibility of
-student involvement.
-
-Techniques for embedding.
-
-Applying DSLs to other areas.
+Finally, I am always on the lookout for other interesting domains
+which could benefit from this kind of approach, and especially for
+opportunities to collaborate with experts in those domains.
 
 \end{document}
