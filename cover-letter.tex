@@ -2,12 +2,12 @@
 
 % \usepackage{url}
 
-% \newif\ifteaching
-% \newif\ifresearch
+% \newtoggle{teaching}
+% \newtoggle{research}
 
 %%% Parameters %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \teachingfalse
-% \researchtrue
+% \toggletrue{teaching}
+% \toggletrue{research}
 % \def\salutation{Dear Sir or Madam}
 % \def\thereaddress{Search Committee \\ 123 Search Committee Lane \\ El
 %   Frijoles, TX 12345}
@@ -16,6 +16,9 @@
 % \def\opportunity{I am excited by the opportunity to\dots}
 % \def\placespecific{On a personal note\dots}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\ronly}[1]{\ifboolexpr{togl{research}}{#1}{}}
+\newcommand{\tonly}[1]{\ifboolexpr{togl{teaching}}{#1}{}}
 
 \widowpenalty 10000
 
@@ -30,17 +33,20 @@
 
 I am writing to apply for \position, which \foundon.  \opportunity
 
-\ifresearch
-Broadly speaking, my research is about connecting theory and practice:
-I love thinking deeply about beautiful mathematical abstractions and
-then applying them to get real things done more powerfully, elegantly,
-and efficiently.  Specifically, my research is in two main areas: the
-first is in the intersection of combinatorics and programming
-languages, turning abstract combinatorial results into practical
-programming tools; the second is the design and implementation of
-domain-specific languages (DSLs). I am also passionate about the
-centrality of community in research---both in terms of collaboration
-and communicating results via publishing and teaching.
+Broadly speaking, both my research and teaching are about connecting
+theory and practice: I love developing insights into beautiful
+mathematical abstractions, applying them to get real things done
+powerfully, elegantly, and efficiently, and communicating them in
+relevant, engaging ways.  \ronly{Specifically, my research is in two
+  main areas: the first is in the intersection of combinatorics and
+  programming languages, turning abstract combinatorial results into
+  practical programming tools; the second is the design and
+  implementation of domain-specific languages (DSLs). }I am
+\ronly{also }passionate about the centrality of community to research
+and teaching---collaboration with students and colleagues is one of my
+main sources of joy as a computer scientist.
+
+\ifboolexpr{ togl{research} }{
 
 My dissertation focuses on the theory of \emph{combinatorial
   species}---a unified framework for describing and analyzing a wide
@@ -72,8 +78,8 @@ are represented using a novel tree structure based on the theory of
 monoids and monoid actions, enabling many high-level operations on
 diagrams such as juxtaposition, finding boundary points, and inclusion
 testing.  I have ideas for many more projects in a similar
-vein\ifteaching---many of which are ripe for undergraduate
-involvement---\else, \fi including: developing good abstractions and
+vein\ifboolexpr{togl{teaching}}{---many of which are ripe for undergraduate
+involvement---}{, }including: developing good abstractions and
 language constructs for animation and interactivity; building user
 interfaces offering dual, editable, bidirectionally connected views of
 code and graphical output; designing and implementing ``natural'' DSLs
@@ -83,29 +89,63 @@ levels'' for complex embedded DSLs by selective suppression of
 polymorphism.  More generally, I am also interested in applying
 techniques of domain analysis and DSL design to other areas of
 computer science, in collaboration with researchers specializing in
-those domains.  \fi % research
+those domains.
 
-\ifteaching
-I have extensive teaching experience, including two years as a high
-school teacher and a number of courses at Penn as both a teaching
-assistant and primary instructor.  Most notably, I designed and taught
-a full-credit undergraduate course titled ``The Art of Recursion''
-XXX.  Popular.  YYY need to say something place-specific about
-teaching, perhaps.
-\fi % teaching
+} % research
+{}
+
+\tonly{
+
+  Teaching is a way of life for me: it is a central and inextricable
+  part of my research and creative process. I enjoy writing blog posts
+  and papers, giving talks, and mentoring, in addition to designing
+  and teaching courses. I care deeply about my students as whole
+  persons, and work to make my courses into spaces where they feel
+  welcomed and challenged.  I am also constantly in search of new and
+  creative ways to communicate ideas effectively.  I particularly love
+  taking abstract, beautiful mathematical ideas and finding intuitive
+  ways to explain them, helping students make connections between
+  topics.  In the process, I usually end up with better understanding
+  and intuition myself, and am inspired to explore new and different
+  questions in my research.
+
+  As an example of some of the above themes, at the University of
+  Pennsylvania I designed and taught a full-credit undergraduate
+  course entitled ``The Art of Recursion'', which explored induction,
+  the lambda calculus, equivalence of recursion and iteration, tail
+  call elimination, lazy infinite data structures, and fixpoint
+  theory, among other topics.  Most of these were not otherwise
+  covered in Penn's undergraduate curriculum, so I saw this as an
+  opportunity to make a significant contribution to undergraduate
+  education at Penn.  Besides being beautiful and mind-expanding, such
+  topics are increasingly relevant given industry trends towards
+  functional programming, as reflected in the inclusion of functional
+  programming as a core topic in the new ACM curriculum guidelines.  I
+  structured the course in an unusual way---alternating lectures with
+  student presentations---in an effort to foster collaboration and
+  ownership of the course material among the students; more detail can
+  be found in my teaching statement.  The course received high ratings
+  and rave reviews from students, who described it in terms like
+  ``best course at Penn so far'', ``never have I seen a class so
+  engaged'', ``this class taught me new ways to think'', and praised
+  my teaching as ``stimulating'' and ``hands-down the best instructor
+  I've had in my four years at Penn''.
+
+} % tonly
 
 \placespecific
 
-I am nearing completion of my PhD and expect to finish in August 2014.
-I have previously published an expository paper on the theory of
-species for functional programmers, which will form the basis of a
-chapter; I am currently preparing a paper for submission to MSFP 2014
-with a substantial amount of technical development, which will form
-the basis for another.  There is still work remaining to be done, but
-I am making excellent progress and well on my way to completion. I
-can be reached at \textsf{byorgey@gmail.com} or \textsf{215 350 4532}.
-I am happy to send any additional materials the committee might
-require\ifteaching, such as teaching evaluations\fi.
+I am nearing completion of my Ph.D.\ under the supervision of
+Dr. Stephanie Weirich, and expect to finish in August 2014.  \ronly{I
+  have previously published an expository paper on the theory of
+  species for functional programmers, which will form the basis of a
+  chapter; I am currently preparing a paper for submission to MSFP
+  2014 with a substantial amount of technical development, which will
+  form the basis for another.  There is still work remaining to be
+  done, but I am making excellent progress and well on my way to
+  completion. }I can be reached by email at \textsf{byorgey@gmail.com} or
+by phone at \textsf{215 350 4532}.  I am happy to send any additional materials
+the committee might require\tonly{, such as teaching evaluations}.
 
 Thank you for your consideration.  I look forward to hearing from you.
 
