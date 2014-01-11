@@ -1,0 +1,30 @@
+\documentclass{letter}
+
+\usepackage{url}
+\usepackage{etoolbox}
+\usepackage[noheadfoot,margin=1.5in]{geometry}
+
+\pagestyle{empty}
+
+\newtoggle{teaching}
+\newtoggle{research}
+
+%%% Parameters %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\toggletrue{teaching}
+\toggletrue{research}
+
+\def\salutation{Dear Dr. Fix}
+\def\thereaddress{Department of Mathematics \\ Reed College \\ 3203 SE
+Woodstock Boulevard \\ Portland, Oregon 97202}
+\def\position{the position of visiting professor in computer science}
+\def\foundon{I learned about through ACM's job listings}
+
+\def\opportunity{My research in programming languages and
+  combinatorics, thoughtful, award-winning teaching, and wholehearted
+  embrace of the liberal arts philosophy make me an ideal candidate.}
+
+\def\placespecific{}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{../cover-letter}
