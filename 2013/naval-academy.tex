@@ -1,0 +1,32 @@
+\documentclass{letter}
+
+\usepackage{url}
+\usepackage{etoolbox}
+\usepackage[noheadfoot,margin=1.5in]{geometry}
+
+\pagestyle{empty}
+
+\newtoggle{teaching}
+\newtoggle{research}
+
+%%% Parameters %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\toggletrue{teaching}
+\toggletrue{research}
+
+\def\salutation{Dear Sir or Madam}
+\def\thereaddress{Computer Science Department \\
+    United States Naval Academy\\
+    572M Holloway Rd. Stop 9F \\
+    Annapolis, MD 21402-5002}
+\def\position{the position of assistant professor in computer science}
+\def\foundon{I learned about from Dr. Adam Aviv}
+
+\def\opportunity{My strong research program in programming languages and
+  combinatorics, thoughtful, award-winning teaching, and extensive
+  teaching experience make me an ideal candidate.}
+
+\def\placespecific{}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{../cover-letter}

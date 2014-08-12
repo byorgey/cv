@@ -1,0 +1,31 @@
+\documentclass{letter}
+
+\usepackage{url}
+\usepackage{etoolbox}
+\usepackage[noheadfoot,margin=1.5in]{geometry}
+
+\pagestyle{empty}
+
+\newtoggle{teaching}
+\newtoggle{research}
+
+%%% Parameters %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\toggletrue{teaching}
+\toggletrue{research}
+
+\def\salutation{Dear Sir or Madam}
+\def\thereaddress{Computer Science Department \\
+Wellesley College \\
+106 Central Street \\ Wellesley, MA}
+\def\position{the position of assistant professor in computer science}
+\def\foundon{I learned about through a listing on the CRA website}
+
+\def\opportunity{My research in programming languages and
+  combinatorics, thoughtful, award-winning teaching, and wholehearted
+  embrace of the liberal arts philosophy make me an ideal candidate.}
+
+\def\placespecific{}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{../cover-letter}

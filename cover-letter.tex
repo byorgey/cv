@@ -1,0 +1,167 @@
+% \documentclass{letter}
+
+% \usepackage{url}
+% \usepackage{etoolbox}
+% \usepackage[noheadfoot,margin=1.5in]{geometry}
+
+% \pagestyle{empty}
+
+% \newtoggle{teaching}
+% \newtoggle{research}
+
+%%% Parameters %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \toggletrue{teaching}
+% \toggletrue{research}
+% \def\salutation{Dear Sir or Madam}
+% \def\thereaddress{Search Committee \\ 123 Search Committee Lane \\ El
+%   Frijoles, TX 12345}
+% \def\position{the position of Head Frobnosticator}
+% \def\foundon{I learned about through a posting on the CRA website}
+% \def\opportunity{I am excited by the opportunity to\dots}
+% \def\placespecific{On a personal note\dots}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\ronly}[1]{\ifboolexpr{togl{research}}{#1}{}}
+\newcommand{\tonly}[1]{\ifboolexpr{togl{teaching}}{#1}{}}
+
+\widowpenalty 10000
+
+\signature{Brent A. Yorgey}
+\address{257 S 46th St. Apt. 1 \\ Philadelphia, PA 19139}
+
+\begin{document}
+
+\begin{letter}{\thereaddress}
+
+\opening{\salutation:}
+
+I am writing to apply for \position, which \foundon.  \opportunity
+
+Broadly speaking, both my research and teaching are about connecting
+theory and practice: I love developing insights into beautiful
+mathematical abstractions, applying them to get real things done
+powerfully, elegantly, and efficiently, and communicating them in
+relevant, engaging ways.  \ronly{Specifically, my research is in two
+  main areas: the first is in the intersection of combinatorics and
+  programming languages, turning abstract combinatorial results into
+  practical programming tools; the second is the design and
+  implementation of domain-specific languages (DSLs). }I am
+\ronly{also }passionate about the centrality of community to research
+and teaching---collaboration with students and colleagues is one of my
+main sources of joy as a computer scientist.
+
+\ifboolexpr{ togl{research} }{
+
+  My dissertation focuses on the theory of \emph{combinatorial
+    species}---a unified framework for describing and analyzing a wide
+  range of combinatorial structures---and specifically on bridging the
+  gap between the theory's origins in pure combinatorics and its
+  application to the theory and practice of programming.
+  Combinatorial species have the potential to revolutionize the way we
+  reason about and work with data structures, leading to increased
+  expressivity and precision.  \ifboolexpr{togl{teaching}}{My research
+    statement contains additional details about the work carried out
+    in my dissertation and my plans for future work.}{Species can
+    unify ``labelled'' structures (such as arrays and finite maps)
+    with more traditional ``algebraic'' types (such as lists and
+    binary trees) under the same framework; at the same time, they
+    provide the ability to reason about memory allocation and layout,
+    giving an ``end-to-end'' framework that allows reasoning about
+    everything from high-level properties of data structures to
+    practical implementation issues.  There is plenty left to explore,
+    and I am excited to continue the work begun in my
+    dissertation---for example, investigating the use of species to
+    work with \emph{symmetric} data structures such as bags and
+    cycles, or how the closely related theory of \emph{generating
+      functions} can be interpreted computationally to encompass a
+    wide range of algorithms (serialization, deserialization,
+    enumeration, random generation\dots) over data structures.}
+
+  For the past five years I have also been developing a
+  domain-specific language, embedded in Haskell, for describing vector
+  graphics (\url{http://projects.haskell.org/diagrams/}).  My focus
+  has been on discovering fundamental abstractions through careful
+  domain analysis, resulting in an expressive, powerful
+  language. \ifboolexpr{togl{teaching}}{I have many ideas for future
+    projects in this area---many of which are particularly conducive
+    to undergraduate involvement---described in more detail in my
+    research statement.}{For example, diagrams are represented using a
+    novel tree structure based on the theory of monoids and monoid
+    actions, enabling many high-level operations on diagrams such as
+    juxtaposition, finding boundary points, and inclusion testing.  I
+    have ideas for many more projects in a similar vein, including:
+    developing good abstractions and language constructs for animation
+    and interactivity; building user interfaces offering dual,
+    editable, bidirectionally connected views of code and graphical
+    output; designing and implementing ``natural'' DSLs for
+    identifying subparts of a diagram (\emph{e.g.} ``the third red
+    triangle''); and building tools to automatically create ``language
+    levels'' for complex embedded DSLs by selective suppression of
+    polymorphism.}  More generally, I am also interested in applying
+  techniques of domain analysis and DSL design to other areas of
+  computer science, in collaboration with researchers specializing in
+  those domains.
+
+} % research
+{}
+
+\tonly{
+
+  Teaching is a way of life for me: it is a central and inextricable
+  part of my research and creative process. I enjoy writing blog posts
+  and papers, giving talks, and mentoring, in addition to designing
+  and teaching courses. I care deeply about my students as whole
+  persons, and work to make my courses into spaces where they feel
+  welcomed and challenged.  I am also constantly in search of new and
+  creative ways to communicate ideas effectively.  I particularly love
+  taking abstract, beautiful mathematical ideas and finding intuitive
+  ways to explain them, helping students make connections between
+  topics.  In the process, I usually end up with better understanding
+  and intuition myself, and am inspired to explore new and different
+  questions in my research.
+
+  As an example of some of the above themes, at the University of
+  Pennsylvania I designed and taught a full-credit undergraduate
+  course entitled ``The Art of Recursion'', which explored induction,
+  the lambda calculus, equivalence of recursion and iteration, tail
+  call elimination, lazy infinite data structures, and fixpoint
+  theory, among other topics.  Most of these were not otherwise
+  covered in Penn's undergraduate curriculum, so I saw this as an
+  opportunity to make a significant contribution to undergraduate
+  education at Penn.  Besides being beautiful and mind-expanding, such
+  topics are increasingly relevant given industry trends towards
+  functional programming, as reflected in the inclusion of functional
+  programming as a core topic in the new ACM curriculum guidelines.  I
+  structured the course in an unusual way---alternating lectures with
+  student presentations---in an effort to foster collaboration and
+  ownership of the course material among the students; more detail can
+  be found in my teaching statement.  The course received high ratings
+  and rave reviews from students, who described it in terms like
+  ``best course at Penn so far'', ``never have I seen a class so
+  engaged'', ``this class taught me new ways to think'', and praised
+  my teaching as ``stimulating'' and ``hands-down the best instructor
+  I've had in my four years at Penn''.
+
+} % tonly
+
+\placespecific
+
+I am nearing completion of my Ph.D.\ under the supervision of
+Dr. Stephanie Weirich, and expect to finish in August 2014.  \ronly{I
+  have previously published an expository paper on the theory of
+  species for functional programmers, which will form the basis of a
+  chapter; I am currently preparing a paper for submission to MSFP
+  2014 with a substantial amount of technical development, which will
+  form the basis for another.  There is still work remaining to be
+  done, but I am making excellent progress and well on my way to
+  completion. }I can be reached by email at \textsf{byorgey@gmail.com} or
+by phone at \textsf{215 350 4532}.  I am happy to send any additional materials
+the committee might require\tonly{, such as teaching evaluations}.
+
+Thank you for your consideration.  I look forward to hearing from you.
+
+\closing{Sincerely,}
+
+\end{letter}
+
+\end{document}
