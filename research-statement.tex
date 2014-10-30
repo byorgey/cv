@@ -57,12 +57,12 @@ computation.  In particular, taking results in pure combinatorics and
 ``porting'' them to a computational setting yields both practical
 programming tools and new insight into the underlying mathematics.
 
-My dissertation research focuses on the \textbf{theory of
+My dissertation focuses on the \textbf{theory of
   combinatorial species}, developed over the past three decades as a
 unifying framework for enumerative combinatorics. As a purely
 combinatorial theory, species are relatively well-explored, but there
 are striking connections to the theory of algebraic data types which
-remain largely unexplored and unexploited. I have done some purely
+remain largely unexplored and unexploited. I have done some
 expository work, both in a paper published in the Haskell
 Symposium~\cite{yorgey2010species} and on my blog~\cite{blog}, making the
 theory accessible to the average functional programmer.  The core of
@@ -86,24 +86,23 @@ Another strength of the theory of species is its ability to describe
 \textbf{structures with nontrivial symmetries}, such as cycles or
 bags.  Computationally, these correspond to data structures where one
 ``abstract'' value can have multiple concrete representations which
-the programmer should not be able to observe.  Such abstract data
+the programmer should not be able to distinguish.  Such abstract data
 types occur frequently, but are typically implemented in an ad-hoc
 way, with no help from the compiler in ensuring that the
 implementation is correct or that the abstract interface does not leak
-representation detail.  Species may afford a framework for reasoning
+representation details.  Species may afford a framework for reasoning
 about such abstract data structures, though the details are far from
-obvious.  This is an area I have explicitly chosen not to explore in
-my doctoral research, but which I am excited to ponder in the future.
+obvious.
 
 Yet another key feature of the theory of species is its strong
 connection to the theory of \textbf{generating functions}, which can
 be used to summarize and extract information of interest about
 species.  This is a rich seam of material with plenty of combinatorics
-left to ``mine'' for computational significance.  In particular, my
-intuition tells me that many algorithms of interest over data
-structures (enumeration, random generation, serialization,
-deserialization\dots) can be reformulated using the framework of
-generating functions, leading to new insights and new algorithms.
+left to ``mine'' for computational significance.  In particular, I
+suspect that many algorithms of interest over data structures
+(enumeration, random generation, serialization, deserialization\dots)
+can be reformulated using the framework of generating functions,
+leading to new insights and new algorithms.
 
 \section*{Domain-specific languages and type systems}
 \label{sec:edsls}
@@ -111,12 +110,11 @@ generating functions, leading to new insights and new algorithms.
 Almost any domain can benefit greatly from the principled design of
 \textbf{domain-specific languages (DSLs) and type systems}.  Such
 languages enable more economical communication of problems and
-solutions in the domain (with both computers and humans), and
-abstracting away domain-irrelevant detail enables higher-level
-thinking and new insights.  Moreover, the process of constructing
-domain-specific languages itself often sheds new light on the domain
-under consideration, since it exposes fundamental questions about the
-meaning of entities and operations in the domain.
+solutions in the domain, and abstracting away domain-irrelevant detail
+enables higher-level thinking and new insights.  Moreover, the process
+of constructing domain-specific languages itself often sheds new light
+on the domain under consideration, since it exposes fundamental
+questions about the meaning of entities and operations in the domain.
 
 Type systems play an important role in the design of expressive DSLs.
 Sme of my earlier work was concerned with extending Haskell's type
@@ -127,13 +125,14 @@ functional programming world, garnering nearly 50 citations over the
 past two years.
 
 My current work on embedded domain-specific languages focuses on the
-areas of graphics and animation.  For the past five years I have been
+areas of graphics and animation.  For the past six years I have been
 developing a domain-specific language, \texttt{diagrams}, for
 describing \textbf{vector graphics}
 (\url{http://projects.haskell.org/diagrams}). It is embedded in the
 Haskell programming language, with emphases on expressivity, elegant
-design, and careful analysis of the underlying domain, leading to the
-application of mathematical abstractions capturing its essence.  For
+design, and careful analysis of the underlying domain. This careful
+analysis often leads to the discovery of mathematical abstractions
+that elegantly capture the essence of some aspect of the domain.  For
 example, as described in a Haskell symposium
 paper~\cite{Yorgey2012monoids}, diagrams are represented using a novel
 tree structure with both upwards- and downwards-accumulating
