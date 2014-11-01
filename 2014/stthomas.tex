@@ -1,0 +1,34 @@
+\documentclass{letter}
+
+\usepackage{url}
+\usepackage{etoolbox}
+\usepackage[noheadfoot,margin=1.5in]{geometry}
+
+\pagestyle{empty}
+
+\newtoggle{teaching}
+\newtoggle{research}
+
+%%% Parameters %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\toggletrue{teaching}
+\toggletrue{research}
+
+\def\salutation{Dear Dr. Werness}
+\def\thereaddress{Dr. Mark Werness, chair \\ Department of Computer
+  and Information Sciences \\
+University of St. Thomas \\
+2115 Summit Avenue \\
+Saint Paul, Minnesota 55105}
+\def\position{the position of Assistant Professor of Computer and
+  Information Sciences}
+\def\foundon{}
+
+\def\opportunity{My research in programming languages and
+  combinatorics, thoughtful, award-winning teaching, and wholehearted
+  embrace of the liberal arts philosophy make me an ideal candidate.}
+
+\def\placespecific{}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{../cover-letter}

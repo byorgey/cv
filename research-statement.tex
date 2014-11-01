@@ -49,6 +49,85 @@ planned future directions for my research.
 %% highlight continuity between them: applying beautiful math to give
 %% insight/solve problems/etc.
 
+\section*{Domain-specific languages and type systems}
+\label{sec:edsls}
+
+Almost any domain can benefit greatly from the principled design of
+\textbf{domain-specific languages (DSLs) and type systems}.  Such
+languages enable more economical communication of problems and
+solutions in the domain, and abstracting away domain-irrelevant detail
+enables higher-level thinking and new insights.  Moreover, the process
+of constructing domain-specific languages itself often sheds new light
+on the domain under consideration, since it exposes fundamental
+questions about the meaning of entities and operations in the domain.
+
+Type systems play an important role in the design of expressive DSLs.
+Sme of my earlier work was concerned with extending Haskell's type
+system to allow ``promotion'' of values to
+types~\cite{Yorgey2012promotion}, a feature particularly useful for
+DSLs embedded in Haskell.  That work has made a big impact in the
+functional programming world, garnering nearly 50 citations over the
+past two years.
+
+My current work on embedded domain-specific languages focuses on the
+areas of graphics and animation.  For the past six years I have been
+developing a domain-specific language, \texttt{diagrams}, for
+describing \textbf{vector graphics}
+(\url{http://projects.haskell.org/diagrams}). It is embedded in the
+Haskell programming language, with emphases on expressivity, elegant
+design, and careful analysis of the underlying domain. This careful
+analysis often leads to the discovery of mathematical abstractions
+that elegantly capture the essence of some aspect of the domain.  For
+example, as described in a Haskell symposium
+paper~\cite{Yorgey2012monoids}, diagrams are represented using a novel
+tree structure with both upwards- and downwards-accumulating
+annotations, based on the theory of monoids and monoid actions.
+
+\subsection*{Future directions}
+
+I am especially excited about this area of research since it provides
+\textbf{many potential avenues for student involvement}, across a wide
+range of backgrounds and interests.  Students can get their feet wet
+helping with the implementation of a DSL or brainstorming new
+features, or more advanced students can explore type systems and the
+mathematical semantics underlying new DSLs.
+
+\texttt{diagrams} currently makes use of a preliminary domain-specific
+language for constructing \textbf{animations} (and more generally, any
+\emph{time-varying} values).  In collaboration with Andy Gill at the
+University of Kansas and Nick Wu at the University of Oxford, I have
+been working on a complete redesign based on the theory of
+2-categories---despite the rather abstract underpinnings, the
+resulting API promises to be expressive, elegant, and practical.  The
+insights we have gained will likely be relevant for other time-centric
+domains as well, such as music and signal processing.
+
+Another direction in which I would like to extend the
+\texttt{diagrams} framework is adding \textbf{interactivity}.
+Currently, users can describe static or animated diagrams, but there
+is no easy way to create diagrams which respond to input.  What are
+the underlying semantics of iteractivity?  What would it look like to
+have a convenient language in which to describe interactive things?
+Part of the answer may lie in recent work on \emph{functional reactive
+  programming}, but finding a natural way to integrate this work with
+\texttt{diagrams} will likely raise new questions and lead to new
+insights.
+
+In addition to interactivity in the end result, what about
+interactivity in the process of constructing diagrams itself?  The
+idea is to develop a \textbf{bidirectional user interface} which
+allows a user to construct a diagram either by writing code or by
+interacting directly with the displayed diagram using their mouse,
+either to edit the existing diagram or to draw new components.  In
+either case, edits to one form (code or image) will be immediately
+reflected in the other.  The new techniques needed to make such a
+bidirectional user interface work should also be applicable in domains
+other than drawing.
+
+Finally, I am always on the lookout for other interesting domains
+which could benefit from this kind of approach, and especially for
+opportunities to collaborate with experts in those domains.
+
 \section*{Combinatorics, computation, and data structures}
 \label{sec:combinatorics}
 
@@ -103,84 +182,6 @@ suspect that many algorithms of interest over data structures
 (enumeration, random generation, serialization, deserialization\dots)
 can be reformulated using the framework of generating functions,
 leading to new insights and new algorithms.
-
-\section*{Domain-specific languages and type systems}
-\label{sec:edsls}
-
-Almost any domain can benefit greatly from the principled design of
-\textbf{domain-specific languages (DSLs) and type systems}.  Such
-languages enable more economical communication of problems and
-solutions in the domain, and abstracting away domain-irrelevant detail
-enables higher-level thinking and new insights.  Moreover, the process
-of constructing domain-specific languages itself often sheds new light
-on the domain under consideration, since it exposes fundamental
-questions about the meaning of entities and operations in the domain.
-
-Type systems play an important role in the design of expressive DSLs.
-Sme of my earlier work was concerned with extending Haskell's type
-system to allow ``promotion'' of values to
-types~\cite{Yorgey2012promotion}, a feature particularly useful for
-DSLs embedded in Haskell.  That work has made a big impact in the
-functional programming world, garnering nearly 50 citations over the
-past two years.
-
-My current work on embedded domain-specific languages focuses on the
-areas of graphics and animation.  For the past six years I have been
-developing a domain-specific language, \texttt{diagrams}, for
-describing \textbf{vector graphics}
-(\url{http://projects.haskell.org/diagrams}). It is embedded in the
-Haskell programming language, with emphases on expressivity, elegant
-design, and careful analysis of the underlying domain. This careful
-analysis often leads to the discovery of mathematical abstractions
-that elegantly capture the essence of some aspect of the domain.  For
-example, as described in a Haskell symposium
-paper~\cite{Yorgey2012monoids}, diagrams are represented using a novel
-tree structure with both upwards- and downwards-accumulating
-annotations, based on the theory of monoids and monoid actions.
-
-\subsection*{Future directions}
-
-I am especially excited about this area of research since it provides
-\textbf{many potential avenues for student involvement}, across a wide
-range of backgrounds and interests.  Students can get their feet wet
-helping with the implementation of a DSL or brainstorming new
-features, or more advanced students can explore type systems and the
-mathematical semantics underlying new DSLs.
-
-\texttt{diagrams} currently makes use of a preliminary domain-specific
-language for constructing \textbf{animations} (and more generally, any
-\emph{time-varying} values).  In collaboration with Andy Gill and Nick
-Wu, I have been working on a complete redesign based on the theory of
-2-categories---despite the rather abstract underpinnings, the
-resulting API promises to be expressive, elegant, and practical.  The
-insights we have gained are likely relevant for other time-centric
-domains as well, such as music and signal processing.
-
-Another direction in which I would like to extend the
-\texttt{diagrams} framework is adding \textbf{interactivity}.
-Currently, users can describe static or animated diagrams, but there
-is no easy way to create diagrams which respond to input.  What are
-the underlying semantics of iteractivity?  What would it look like to
-have a convenient language in which to describe interactive things?
-Part of the answer may lie in recent work on \emph{functional reactive
-  programming}, but finding a natural way to integrate this work with
-\texttt{diagrams} will likely raise new questions and lead to new
-insights.
-
-In addition to interactivity in the end result, what about
-interactivity in the process of constructing diagrams itself?  The
-idea is to develop a \textbf{bidirectional user interface} which
-allows a user to construct a diagram either by writing code or by
-interacting directly with the displayed diagram using their mouse,
-either to edit the existing diagram or to draw new components.  In
-either case, edits to one form (code or image) will be immediately
-reflected in the other.  The new techniques needed to make such a
-bidirectional user interface work should also be applicable in domains
-other than drawing.
-
-Finally, I am always on the lookout for other interesting domains
-which could benefit from this kind of approach, and especially for
-opportunities to collaborate with experts in those domains.
 
 \bibliographystyle{plain}
 \bibliography{research}
